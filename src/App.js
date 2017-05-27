@@ -1,13 +1,19 @@
-import React from 'react';
-import Main from './Main.js'
+import React, { Component } from 'react';
+import './App.css';
+import Main from './Main'
+import store from './redux/store.js'
+import { Provider } from 'react-redux'
 
-class App extends React.Component{
-  render(){
+class App extends Component {
+  render() {
     return (
       <div>
-        <Main/>
+        <Provider store={store}>
+          <Main />
+        </Provider>
       </div>
-    )
+    );
   }
 }
-export default App
+
+export default App;
