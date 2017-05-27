@@ -5,6 +5,11 @@ const oldState = [
   {title:'去吃饭',complete:false,id:3}
 ]
 function listReducer(state=oldState,action){
-  return state
+  switch (action.type) {
+    case "COMPLETE":
+      return state.map(item=>({...item,complete:item.id.toString()===action.id?!item.complete:item.complete}))
+    default:
+      return state
+  }
 }
 export default combineReducers({list:listReducer})
