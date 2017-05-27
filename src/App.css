@@ -1,24 +1,66 @@
-.App {
+*{
+  box-sizing: border-box;
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #6f9436;
+  margin: 0;
+  color:#212121;
+}
+.main{
+  background-color: #fff;
+  width: 567px;
+  height: 628px;
+  margin: 100px auto;
+  box-shadow: 0 2px 4px 0;
+}
+.header{
   text-align: center;
+  border: 1px solid red;
+  line-height: 128px;
+  font-size: 36px;
+  font-weight: bolder;
+  font-family: 'Arial Rounded MT Bold';
+}
+.todolist{
+  border: 1px solid red;
+  height: 280px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.todolist .container{
+  margin: 20px 120px;
+  border: 1px solid green;
+  height: 240px;
+  overflow: auto;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.todolist li{
+  line-height: 64px;
+  font-size: 24px;
 }
-
-.App-intro {
-  font-size: large;
+.todolist li.completed{
+  color:#989191;
+  text-decoration: line-through;
+  position: relative;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.todolist li.completed:after{
+  content: ' ';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-image: url('/img/right.svg');
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+.form{
+  border: 1px solid red;
+  height: 110px;
+}
+.actions{
+  border: 1px solid red;
+  height: 110px;
 }
